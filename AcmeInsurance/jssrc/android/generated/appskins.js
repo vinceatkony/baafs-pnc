@@ -18,6 +18,7 @@ function skinsInit() {
     dgFocus = "dgFocus";
     galFocus = "galFocus";
     tabActive = "tabActive";
+    btnHome = "btnHome";
     radioFocus = "radioFocus";
     segFocus = "segFocus";
     camNormal = "camNormal";

@@ -57,31 +57,12 @@ function addWidgetsfrmPolicy() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     vbox2098211745129.add();
-    var image22098211745117 = new kony.ui.Image2({
-        "id": "image22098211745117",
-        "isVisible": true,
-        "src": "acme.jpg",
-        "imageWhenFailed": null,
-        "imageWhileDownloading": null
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "margin": [0, 0, 0, 0],
-        "padding": [0, 0, 0, 0],
-        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
-        "referenceWidth": null,
-        "referenceHeight": null,
-        "marginInPixel": false,
-        "paddingInPixel": false,
-        "containerWeight": 57
-    }, {
-        "glossyEffect": constants.IMAGE_GLOSSY_EFFECT_DEFAULT
-    });
     var vbox2098211745130 = new kony.ui.Box({
         "id": "vbox2098211745130",
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
-        "containerWeight": 21,
+        "containerWeight": 22,
         "margin": [1, 1, 1, 1],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
@@ -111,7 +92,7 @@ function addWidgetsfrmPolicy() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox2098211745116.add(
-    vbox2098211745129, image22098211745117, vbox2098211745130);
+    vbox2098211745129, vbox2098211745130);
     var lblDescription = new kony.ui.Label({
         "id": "lblDescription",
         "isVisible": true,
@@ -657,29 +638,8 @@ function addWidgetsfrmPolicy() {
     });
     segment220982117452368box.add(
     lblDental, hbox20982117452369, hbox20982117452372, hbox20982117452375, lblLife, hbox20982117452383, hbox2098211745622, lblLTD, hbox2098211745678, hbox2098211745756, lblInsuranceCardHeader, imgInsuranceCard);
-    var button2098211745964 = new kony.ui.Button({
-        "id": "button2098211745964",
-        "isVisible": true,
-        "text": "submit",
-        "skin": "btnNormal",
-        "focusSkin": "btnFocus"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [1, 1, 1, 1],
-        "padding": [0, 3, 0, 3],
-        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-        "displayText": true,
-        "marginInPixel": true,
-        "paddingInPixel": false,
-        "containerWeight": 4
-    }, {
-        "glowEffect": false,
-        "showProgressIndicator": true
-    });
     frmPolicy.add(
-    hbox2098211745116, lblDescription, segment220982117452368, button2098211745964);
+    hbox2098211745116, lblDescription, segment220982117452368);
 };
 
 function frmPolicyGlobals() {

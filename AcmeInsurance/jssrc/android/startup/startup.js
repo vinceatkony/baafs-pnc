@@ -1,11 +1,7 @@
 //startup.js file
-function appMenuSummary_callback_seq0() {
-    frmHome.show();
-};
+function appMenuSummary_callback_seq0() {};
 
-function appMenuOrders_callback_seq0() {
-    frmAgent.show();
-};
+function appMenuOrders_callback_seq0() {};
 
 function appMenuInventory_callback_seq0() {
     frmPolicy.show();
@@ -31,11 +27,12 @@ sessionID = "";
 skinsInit();
 
 function appInit(params) {
-    frmAgentGlobals();
-    frmHomeGlobals();
-    frmOrderGlobals();
+    frmBabyGlobals();
+    frmClaimGlobals();
+    frmEntreGlobals();
+    frmLocationsGlobals();
     frmPolicyGlobals();
-    frmProductsGlobals();
+    frmProvidersGlobals();
     frmUsageGlobals();
 };
 
@@ -44,7 +41,7 @@ function themeCallBack() {
     kony.application.setApplicationInitializationEvents({
         init: appInit,
         showstartupform: function() {
-            frmOrder.show();
+            frmEntre.show();
         }
     });
 };

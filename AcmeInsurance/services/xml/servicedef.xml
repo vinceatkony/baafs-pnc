@@ -28,6 +28,40 @@
             <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
          </service-output>
       </service>
+      <service cachable="false" cacheduration="" id="GetLocations" passwordencrypted="true" smscode="" smsenabled="false" type="plainxmlserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://192.168.10.108:8080/RetrieveLocations.xml"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="http.method" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input/>
+         <service-output>
+            <dataset id="Locations" src="//Locations">
+               <param datatype="string" format="None" formatvalue="" name="Name" sms-name="" src="Location/Name" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="Addr1" sms-name="" src="Location/Addr1" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="Addr2" sms-name="" src="Location/Addr2" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="City" sms-name="" src="Location/Citry" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="State" sms-name="" src="Location/State" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="Zip" sms-name="" src="Location/Zip" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="Phone" sms-name="" src="Location/Phone" target="response"/>
+            </dataset>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
       <service cachable="true" cacheduration="" id="GetPolicy" passwordencrypted="false" smscode="" smsenabled="false" type="plainxmlserviceConnector">
          <service-config>
             <config-param name="endpointUrl" value="http://10.0.1.30:8080/GetLifeInfo.txt"/>

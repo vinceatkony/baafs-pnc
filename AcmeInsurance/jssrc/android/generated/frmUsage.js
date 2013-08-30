@@ -20,10 +20,10 @@ function addWidgetsfrmUsage() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     vbox2098211745124.add();
-    var image22098211745117 = new kony.ui.Image2({
-        "id": "image22098211745117",
+    var image220982117451563 = new kony.ui.Image2({
+        "id": "image220982117451563",
         "isVisible": true,
-        "src": "acme.jpg",
+        "src": null,
         "imageWhenFailed": null,
         "imageWhileDownloading": null
     }, {
@@ -35,14 +35,14 @@ function addWidgetsfrmUsage() {
         "referenceHeight": null,
         "marginInPixel": false,
         "paddingInPixel": false,
-        "containerWeight": 57
+        "containerWeight": 40
     }, {});
     var vbox2098211745125 = new kony.ui.Box({
         "id": "vbox2098211745125",
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
-        "containerWeight": 22,
+        "containerWeight": 23,
         "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
@@ -72,7 +72,7 @@ function addWidgetsfrmUsage() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox2098211745116.add(
-    vbox2098211745124, image22098211745117, vbox2098211745125);
+    vbox2098211745124, image220982117451563, vbox2098211745125);
     var vbox2098211745493 = new kony.ui.Box({
         "id": "vbox2098211745493",
         "isVisible": true,

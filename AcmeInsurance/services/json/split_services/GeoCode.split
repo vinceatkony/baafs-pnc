@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pxsObject>
+    <appSmsCode></appSmsCode>
+    <plainxmlservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <group>other</group>
+        <httpmethod></httpmethod>
+        <id>GeoCode</id>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>addressText</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>1125 laurel lane naperville, il 60540</testvalue>
+            <value></value>
+        </inparam>
+        <intemplate></intemplate>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <outtemplate>{
+   "results": [{
+      "address_components": [
+         {
+            "long_name": "1125",
+            "short_name": "1125",
+            "types": ["street_number"]
+         },
+         {
+            "long_name": "Laurel Lane",
+            "short_name": "Laurel Ln",
+            "types": ["route"]
+         },
+         {
+            "long_name": "Naperville",
+            "short_name": "Naperville",
+            "types": [
+               "locality",
+               "political"
+            ]
+         },
+         {
+            "long_name": "Lisle",
+            "short_name": "Lisle",
+            "types": [
+               "administrative_area_level_3",
+               "political"
+            ]
+         },
+         {
+            "long_name": "DuPage",
+            "short_name": "Dupage",
+            "types": [
+               "administrative_area_level_2",
+               "political"
+            ]
+         },
+         {
+            "long_name": "Illinois",
+            "short_name": "IL",
+            "types": [
+               "administrative_area_level_1",
+               "political"
+            ]
+         },
+         {
+            "long_name": "United States",
+            "short_name": "US",
+            "types": [
+               "country",
+               "political"
+            ]
+         },
+         {
+            "long_name": "60540",
+            "short_name": "60540",
+            "types": ["postal_code"]
+         }
+      ],
+      "formatted_address": "1125 Laurel Lane, Naperville, IL 60540, USA",
+      "geometry": {
+         "location": {
+            "lat": 41.752396,
+            "lng": -88.144157
+         },
+         "location_type": "ROOFTOP",
+         "viewport": {
+            "northeast": {
+               "lat": 41.7537449802915,
+               "lng": -88.14280801970851
+            },
+            "southwest": {
+               "lat": 41.7510470197085,
+               "lng": -88.14550598029152
+            }
+         }
+      },
+      "types": ["street_address"]
+   }],
+   "status": "OK"
+}</outtemplate>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>fmt_address</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//formatted_address</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>lat</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//geometry/location/lat</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>lng</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//geometry/location/lng</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>id</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>addr_cmp</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//address_components</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>long_name</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>long_name</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>addr_cmp</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>types</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>types</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>addr_cmp</value>
+        </outparam>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <timeout></timeout>
+        <url>http://maps.googleapis.com/maps/api/geocode/json?sensor=false&amp;address=$addressText</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+    </plainxmlservice>
+</pxsObject>

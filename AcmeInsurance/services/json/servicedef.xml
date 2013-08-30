@@ -3,6 +3,41 @@
       <config-param name="APP_SMS_HEADER" value="null"/>
    </app-config>
    <services>
+      <service cachable="false" cacheduration="" id="GeoCode" passwordencrypted="true" smscode="" smsenabled="false" type="jsonConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="http://maps.googleapis.com/maps/api/geocode/json?sensor=false&amp;address=$addressText"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="http.method" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <param datatype="string" encode="true" name="addressText" sms-name="" src="" value=""/>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="fmt_address" sms-name="" src="//formatted_address" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="lat" sms-name="" src="//geometry/location/lat" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="lng" sms-name="" src="//geometry/location/lng" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="id" sms-name="" src="" target=""/>
+            <dataset id="addr_cmp" src="//address_components">
+               <param datatype="string" format="None" formatvalue="" name="long_name" sms-name="" src="long_name" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="types" sms-name="" src="types" target="response"/>
+            </dataset>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
+         </service-output>
+      </service>
       <service cachable="false" cacheduration="" id="jsonservice" passwordencrypted="true" smscode="" smsenabled="false" type="jsonConnector">
          <service-config>
             <config-param name="endpointUrl" value="http://localhost:8080/env"/>
