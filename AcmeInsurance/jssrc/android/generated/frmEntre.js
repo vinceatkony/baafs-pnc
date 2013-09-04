@@ -1,4 +1,8 @@
 //Form JS File
+function frmEntre_button20982117451545_onClick_seq0(eventobject) {
+    frmLocations.show();
+};
+
 function addWidgetsfrmEntre() {
     var vbox20982117451537 = new kony.ui.Box({
         "id": "vbox20982117451537",
@@ -89,7 +93,8 @@ function addWidgetsfrmEntre() {
         "isVisible": true,
         "text": "Find an Agent/Provider",
         "skin": "btnHome",
-        "focusSkin": "btnFocus"
+        "focusSkin": "btnFocus",
+        "onClick": frmEntre_button20982117451545_onClick_seq0
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,

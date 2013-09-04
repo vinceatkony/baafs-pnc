@@ -6,6 +6,7 @@
         <cacheduration></cacheduration>
         <cacheable>true</cacheable>
         <dataprovider></dataprovider>
+        <dcResponse/>
         <encryptPwd>false</encryptPwd>
         <escapeXML>false</escapeXML>
         <group>other</group>
@@ -382,7 +383,7 @@
         <smscode></smscode>
         <smsenabled>false</smsenabled>
         <timeout></timeout>
-        <url>http://10.0.1.30:8080/GetLifeInfo.txt</url>
+        <url>http://localhost:8080/GetLifeInfo.txt</url>
         <urlprovider></urlprovider>
         <userid></userid>
     </plainxmlservice>

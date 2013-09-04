@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<Header xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.corillian.com/operations/2004/11">
+			<SessionKey>018cffc782c2a2a1b3891ad522b4db0f</SessionKey>
+			<ResultCode>0</ResultCode>
+			<ResultMessage>OK</ResultMessage>
+		</Header>
+	</soap:Header>
+	<soap:Body>
+		<GetPolicyResponse>
+			<Policies>
+				<Policy>
+					<Index>1</Index>
+					<Number>0000765432133</Number>
+					<NumberMasked>7654321</NumberMasked>
+					<Type>Auto</Type>
+					<Description>Scott's Benefits</Description>
+					<DisplayName>Scott's Benefits</DisplayName>
+					<Benefits>
+						<Benefit>
+							<Type>BI</Type>
+							<Name>Bodily Injury Liability</Name>
+							<Deductible></Deductible>
+							<Limit>$100,000 each person/$300,000 each accident</Limit>
+						</Benefit>
+						<Benefit>
+							<Type>PD</Type>
+							<Name>Property Damage Liability</Name>
+							<Deductible></Deductible>
+							<Limit>$100,00 each accident</Limit>
+						</Benefit>
+						<Benefit>
+							<Type>PIP</Type>
+							<Name>PIP Excess Medical/Workloss</Name>
+							<Deductible>$500</Deductible>
+							<Limit></Limit>
+						</Benefit>
+						<Benefit>
+							<Type>UI</Type>
+							<Name>Uninsured/Underinsured Motorist</Name>
+							<Deductible></Deductible>
+							<Limit>$100,000 each person/$300,000 each accident</Limit>
+						</Benefit>
+						<Benefit>
+							<Type>PPI</Type>
+							<Name>Property Protection Insurance</Name>
+							<Deductible>$0</Deductible>
+							<Limit>$1,000,000</Limit>
+						</Benefit>
+						<Benefit>
+							<Type>COMP</Type>
+							<Name>Comprehensive</Name>
+							<Deductible>$500</Deductible>
+							<Limit>Actual Cash Value</Limit>
+						</Benefit>
+						<Benefit>
+							<Type>COL</Type>
+							<Name>BroadForm Collision</Name>
+							<Deductible>$500</Deductible>
+							<Limit>Actual Cash Value</Limit>
+						</Benefit>
+						<Benefit>
+							<Type>LPD</Type>
+							<Name>Limited Property Damage</Name>
+							<Deductible></Deductible>
+							<Limit>$500</Limit>
+						</Benefit>
+					</Benefits>
+					<InsuranceCard>http://vertapp.konylabs.net/KonyInsuranceWeb/images/insurecard.png</InsuranceCard>
+					
+					<DataAvailable>true</DataAvailable>
+					<Visible>true</Visible>
+				</Policy>
+			</Policies>
+		</GetPolicyResponse>
+	</soap:Body>
+</soap:Envelope>

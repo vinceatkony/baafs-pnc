@@ -6,10 +6,11 @@
         <cacheduration></cacheduration>
         <cacheable>false</cacheable>
         <dataprovider></dataprovider>
+        <dcResponse/>
         <encryptPwd>true</encryptPwd>
         <escapeXML>false</escapeXML>
         <group>other</group>
-        <httpmethod></httpmethod>
+        <httpmethod>GET</httpmethod>
         <id>GetLocations</id>
         <intemplate></intemplate>
         <ntlmDomain></ntlmDomain>
@@ -26,12 +27,12 @@
       &lt;RetrieveLocationsResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
          &lt;Locations&gt;
             &lt;Location&gt;
-               &lt;Name&gt;USFoods Headquarters&lt;/Name&gt;
-               &lt;Addr1&gt;9399 West Higgins Road&lt;/Addr1&gt;
+               &lt;Name&gt;CEFCU Headquarters&lt;/Name&gt;
+               &lt;Addr1&gt;5401 West Dirksen Parkway&lt;/Addr1&gt;
                &lt;Addr2&gt;Suite 500&lt;/Addr2&gt;
-               &lt;City&gt;Rosemount&lt;/City&gt;
+               &lt;City&gt;Peoria&lt;/City&gt;
                &lt;State&gt;IL&lt;/State&gt;
-               &lt;Zip&gt;60018&lt;/Zip&gt;
+               &lt;Zip&gt;61607&lt;/Zip&gt;
                &lt;Phone&gt;1-847-720-8000&lt;/Phone&gt;
             &lt;/Location&gt;
             &lt;Location&gt;
@@ -160,7 +161,7 @@
             <passNull>false</passNull>
             <recordid></recordid>
             <smsname></smsname>
-            <source>Location/Citry</source>
+            <source>Location/City</source>
             <srcformatvalue></srcformatvalue>
             <target>response</target>
             <targetdatatype></targetdatatype>
@@ -244,7 +245,7 @@
         <smscode></smscode>
         <smsenabled>false</smsenabled>
         <timeout></timeout>
-        <url>http://192.168.10.108:8080/RetrieveLocations.xml</url>
+        <url>http://localhost:8080/RetrieveLocations.txt</url>
         <urlprovider></urlprovider>
         <userid></userid>
     </plainxmlservice>

@@ -1,4 +1,43 @@
 //Form JS File
+function frmLocations_segLocations_onRowClick_seq1(status, GeoCode) {
+    if (status == 400) {
+        addResponsesToMap.call(this, GeoCode, frmLocations.segLocations.selectedItems[0].lblName, frmLocations.segLocations.selectedItems[0].lblAddress);
+        frmLocations.lblSelectedName.text = frmLocations["segLocations"]["selectedItems"][0]["lblName"];
+    }
+};
+
+function frmLocations_frmLocations_postshow_seq1(status, GetLocations) {
+    if (status == 400) {
+        if (GetLocations != null && GetLocations != undefined && GetLocations["Locations"] != null && GetLocations["Locations"] != undefined) {
+            var frmLocations_segLocations_temp = [];
+            for (var i1 = 0; i1 < GetLocations["Locations"].length; i1++) {
+                frmLocations_segLocations_temp.push({
+                    "lblAddress": GetLocations["Locations"][i1]["Addr1"] + " " + GetLocations["Locations"][i1]["Addr2"] + " " + GetLocations["Locations"][i1]["City"] + ", " + GetLocations["Locations"][i1]["State"] + " " + GetLocations["Locations"][i1]["Zip"],
+                    "lblName": GetLocations["Locations"][i1]["Name"]
+                })
+            }
+            frmLocations.segLocations.setData(frmLocations_segLocations_temp);
+        }
+    }
+};
+
+function frmLocations_frmLocations_postshow_seq0(eventobject, neworientation) {
+    var GetLocations_inputparam = {};
+    GetLocations_inputparam["serviceID"] = "GetLocations";
+    GetLocations_inputparam["httpheaders"] = {};
+    GetLocations_inputparam["httpconfigs"] = {};
+    GetLocations = appmiddlewareinvokerasync(GetLocations_inputparam, frmLocations_frmLocations_postshow_seq1);
+};
+
+function frmLocations_segLocations_onRowClick_seq0(eventobject, sectionNumber, rowNumber) {
+    var GeoCode_inputparam = {};
+    GeoCode_inputparam["serviceID"] = "GeoCode";
+    GeoCode_inputparam["addressText"] = frmLocations["segLocations"]["selectedItems"][0]["lblAddress"];
+    GeoCode_inputparam["httpheaders"] = {};
+    GeoCode_inputparam["httpconfigs"] = {};
+    GeoCode = appmiddlewareinvokerasync(GeoCode_inputparam, frmLocations_segLocations_onRowClick_seq1);
+};
+
 function addWidgetsfrmLocations() {
     var image220982117451552 = new kony.ui.Image2({
         "id": "image220982117451552",
@@ -19,22 +58,24 @@ function addWidgetsfrmLocations() {
     }, {
         "glossyEffect": constants.IMAGE_GLOSSY_EFFECT_DEFAULT
     });
-    var segment220982117451553box = new kony.ui.Box({
-        "id": "segment220982117451553box",
+    var segLocationsbox = new kony.ui.Box({
+        "id": "segLocationsbox",
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "layoutAlignment": constants.BOX_LAYOUT_ALIGN_FROM_LEFT,
         "containerWeight": 55
     }, {});
-    var segment220982117451553 = new kony.ui.SegmentedUI2({
-        "id": "segment220982117451553",
+    var segLocations = new kony.ui.SegmentedUI2({
+        "id": "segLocations",
         "isVisible": true,
         "retainSelection": false,
         "widgetDataMap": {
-            "label20982117451554": "label20982117451554"
+            "lblAddress": "lblAddress",
+            "lblName": "lblName",
+            "hbox20982117452481": "hbox20982117452481"
         },
-        "rowTemplate": segment220982117451553box,
+        "rowTemplate": segLocationsbox,
         "rowSkin": "seg2Normal",
         "rowFocusSkin": "seg2Focus",
         "sectionHeaderSkin": "seg2Header",
@@ -44,6 +85,7 @@ function addWidgetsfrmLocations() {
         "showScrollbars": false,
         "groupCells": false,
         "screenLevelWidget": false,
+        "onRowClick": frmLocations_segLocations_onRowClick_seq0,
         "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR,
         "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW
     }, {
@@ -53,15 +95,51 @@ function addWidgetsfrmLocations() {
         "paddingInPixel": false,
         "containerWeight": 55
     }, {
-        "indicator": constants.SEGUI_ROW_SELECT,
+        "indicator": constants.SEGUI_NONE,
         "enableDictionary": false,
         "showProgressIndicator": true,
         "progressIndicatorColor": constants.PROGRESS_INDICATOR_COLOR_WHITE,
         "bounces": true,
         "editStyle": constants.SEGUI_EDITING_STYLE_NONE
     });
-    var label20982117451554 = new kony.ui.Label({
-        "id": "label20982117451554",
+    var lblName = new kony.ui.Label({
+        "id": "lblName",
+        "isVisible": true,
+        "skin": "lblBold"
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [1, 1, 1, 1],
+        "padding": [1, 1, 1, 1],
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "marginInPixel": true,
+        "paddingInPixel": false,
+        "containerWeight": 99
+    }, {
+        "wrapping": constants.WIDGET_TEXT_WORD_WRAP
+    });
+    var hbox20982117452481 = new kony.ui.Box({
+        "id": "hbox20982117452481",
+        "isVisible": true,
+        "position": constants.BOX_POSITION_AS_NORMAL,
+        "orientation": constants.BOX_LAYOUT_HORIZONTAL
+    }, {
+        "containerWeight": 21,
+        "percent": true,
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "margin": [1, 1, 1, 1],
+        "padding": [1, 1, 1, 1],
+        "vExpand": false,
+        "hExpand": true,
+        "marginInPixel": true,
+        "paddingInPixel": false,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    hbox20982117452481.add(
+    lblName);
+    var lblAddress = new kony.ui.Label({
+        "id": "lblAddress",
         "isVisible": true,
         "skin": "lblNormal"
     }, {
@@ -73,12 +151,12 @@ function addWidgetsfrmLocations() {
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "marginInPixel": true,
         "paddingInPixel": false,
-        "containerWeight": 23
+        "containerWeight": 11
     }, {
         "wrapping": constants.WIDGET_TEXT_WORD_WRAP
     });
-    segment220982117451553box.add(
-    label20982117451554);
+    segLocationsbox.add(
+    hbox20982117452481, lblAddress);
     var vbox20982117451550 = new kony.ui.Box({
         "id": "vbox20982117451550",
         "isVisible": true,
@@ -95,12 +173,12 @@ function addWidgetsfrmLocations() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     vbox20982117451550.add(
-    image220982117451552, segment220982117451553);
-    var label20982117451561 = new kony.ui.Label({
-        "id": "label20982117451561",
+    image220982117451552, segLocations);
+    var lblSelectedName = new kony.ui.Label({
+        "id": "lblSelectedName",
         "isVisible": true,
-        "text": "Label",
-        "skin": "lblNormal"
+        "text": null,
+        "skin": "lblBold"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -135,12 +213,12 @@ function addWidgetsfrmLocations() {
         "glowEffect": false,
         "showProgressIndicator": true
     });
-    var map20982117451559 = new kony.ui.Map({
-        "id": "map20982117451559",
+    var mapLocations = new kony.ui.Map({
+        "id": "mapLocations",
         "isVisible": true,
         "mapKey": null,
         "provider": constants.MAP_PROVIDER_GOOGLE,
-        "defaultPinImage": null,
+        "defaultPinImage": "pin.png",
         "screenLevelWidget": true
     }, {
         "margin": [1, 1, 1, 1],
@@ -170,7 +248,7 @@ function addWidgetsfrmLocations() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox20982117451558.add(
-    map20982117451559);
+    mapLocations);
     var vbox20982117451551 = new kony.ui.Box({
         "id": "vbox20982117451551",
         "isVisible": true,
@@ -187,7 +265,7 @@ function addWidgetsfrmLocations() {
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     vbox20982117451551.add(
-    label20982117451561, button20982117451562, hbox20982117451558);
+    lblSelectedName, button20982117451562, hbox20982117451558);
     var hbox20982117451549 = new kony.ui.Box({
         "id": "hbox20982117451549",
         "isVisible": true,
@@ -220,6 +298,7 @@ function frmLocationsGlobals() {
         "enabledForIdleTimeout": false,
         "type": constants.FORM_TYPE_NATIVE,
         "skin": "frm",
+        "postShow": frmLocations_frmLocations_postshow_seq0,
         "addWidgets": addWidgetsfrmLocations
     }, {
         "padding": [0, 0, 0, 0],

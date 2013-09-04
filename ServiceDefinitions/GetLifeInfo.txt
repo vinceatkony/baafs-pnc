@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Header><Header xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.corillian.com/operations/2004/11">
+<SessionKey>018cffc782c2a2a1b3891ad522b4db0f</SessionKey>
+<ResultCode>0</ResultCode>
+<ResultMessage>OK</ResultMessage>
+</Header>
+</soap:Header>
+<soap:Body>
+<GetAccountsResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.corillian.com/corillian/banking/messages/2004/05">
+<Accounts xmlns="http://www.corillian.com/corillian/banking/domain/2004/05">
+<MaximumDailyBalance>4</MaximumDailyBalance>
+<CurrentDepositBalance>39742.1421</CurrentDepositBalance>
+<AvailableDepositBalance>32374.7256</AvailableDepositBalance>
+<OutstandingLoanBalance>5</OutstandingLoanBalance>
+<InvestmentRetirementBalance>3</InvestmentRetirementBalance>
+<Masked>false</Masked>
+<Account>
+<Index>1</Index>
+<Number>0000765432133</Number>
+<NumberMasked>7654321</NumberMasked>
+<Type>SAVINGS</Type>
+<HostAccountType>1</HostAccountType>
+<HostAccount2>1002</HostAccount2>
+<Description>Scott's Benefits</Description>
+<DisplayName>Scott's Benefits</DisplayName>
+<LifeBenefit>$200,000</LifeBenefit>
+<ADDBenefit>$200,000</ADDBenefit>
+<DentalDeductable>0</DentalDeductable>
+<DentalCoInsurance>100%</DentalCoInsurance>
+<MaximumDentalBenefit>$1500</MaximumDentalBenefit>
+<LTDMaxBenefit>$10000</LTDMaxBenefit>
+<LTDBenefitPercentage>60%</LTDBenefitPercentage>
+<LTDEliminationPeriod>3 months</LTDEliminationPeriod>
+<LTDOccupationPeriod>2 years</LTDOccupationPeriod>
+<LTDDrugAlcohol>24 months</LTDDrugAlcohol>
+<InsuranceCard>http://vertapp.konylabs.net/KonyInsuranceWeb/images/insurecard.png</InsuranceCard>
+<DataAvailable>true</DataAvailable>
+<Visible>true</Visible>
+<CurrentBalance>7847.3247</CurrentBalance>
+<AvailableBalance>7847.3247</AvailableBalance>
+<MaturityDate>0001-01-01</MaturityDate>
+<BillPayFeeAllowed>false</BillPayFeeAllowed>
+</Account>
+</Accounts>
+</GetAccountsResponse>
+</soap:Body>
+</soap:Envelope>

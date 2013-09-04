@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Header><Header xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SessionKey>018cffc782c2a2a1b3891ad522b4db0f</SessionKey>
+<ResultCode>0</ResultCode>
+<ResultMessage>OK</ResultMessage>
+</Header>
+</soap:Header>
+<soap:Body>
+<RetrieveLocationsResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Locations>
+		<Location>
+			<Name>CEFCU Headquarters</Name>
+			<Addr1>5401 West Dirksen Parkway</Addr1>
+			<Addr2>Suite 500</Addr2>
+			<City>Peoria</City>
+			<State>IL</State>
+			<Zip>61607</Zip>
+			<Phone>1-847-720-8000</Phone>
+		</Location>
+		<Location>
+			<Name>Chicago Office</Name>
+			<Addr1>800 Supreme Drive</Addr1>
+			<Addr2>Suite 200</Addr2>
+			<City>Bensenville</City>
+			<State>IL</State>
+			<Zip>60106</Zip>
+			<Phone>1-630-595-1200</Phone>
+		</Location>
+		<Location>
+			<Name>Streator</Name>
+			<Addr1>One Quality Lane</Addr1>
+			<Addr2></Addr2>
+			<City>Streator</City>
+			<State>IL</State>
+			<Zip>61364</Zip>
+			<Phone>1-800-892-0591</Phone>
+		</Location>
+	</Locations>
+</RetrieveLocationsResponse>
+</soap:Body>
+</soap:Envelope>

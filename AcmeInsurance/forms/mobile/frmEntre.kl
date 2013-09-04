@@ -5784,6 +5784,22 @@
                     </overridePerferred>
                     <contentAlign>4</contentAlign>
                     <parent_contentalignment>middle-center</parent_contentalignment>
+                    <event_onClick>
+                        <evtSequence>
+                            <actionList xsi:type="eventFormAction">
+                                <enabled>true</enabled>
+                                <name></name>
+                                <type>1</type>
+                                <destType>0</destType>
+                                <navigateFrom>None</navigateFrom>
+                                <navigateTo>frmLocations</navigateTo>
+                                <outputMapping/>
+                                <platform>0</platform>
+                            </actionList>
+                            <enabled>true</enabled>
+                            <seqname></seqname>
+                        </evtSequence>
+                    </event_onClick>
                     <parallel_exec>false</parallel_exec>
                     <iphone_glow_effect>false</iphone_glow_effect>
                     <iphone_3d_look>true</iphone_3d_look>

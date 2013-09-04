@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<application name="AcmeInsurance" id="AcmeInsurance">
-    <container type="form" id="frmBaby" displayname="Form"/>
-    <container type="form" id="frmClaim" displayname="Form"/>
-    <container type="form" id="frmEntre" displayname="Form"/>
-    <container type="form" id="frmLocations" displayname="Form">
-        <component type="map" id="map20982117451559" displayname="Map">
-            <attributes value="Google map key is not defined in application properties" platform="general" name="key" datatype="string"/>
+<application id="AcmeInsurance" name="AcmeInsurance">
+    <container displayname="Form" id="frmBaby" type="form"/>
+    <container displayname="Form" id="frmClaim" type="form"/>
+    <container displayname="Form" id="frmEntre" type="form"/>
+    <container displayname="Form" id="frmLocations" type="form">
+        <component displayname="Map" id="mapLocations" type="map">
+            <attributes datatype="string" name="key" platform="general" value="Google map key is not defined in application properties"/>
         </component>
     </container>
-    <container type="form" id="frmPolicy" displayname="Form"/>
-    <container type="form" id="frmProviders" displayname="Form">
-        <component type="textbox2" id="textbox220982117452477" displayname="TextBox2"/>
+    <container displayname="Form" id="frmPolicy" type="form"/>
+    <container displayname="Form" id="frmProviders" type="form">
+        <component displayname="TextBox2" id="textbox220982117452477" type="textbox2"/>
     </container>
-    <container type="form" id="frmUsage" displayname="Form"/>
+    <container displayname="Form" id="frmUsage" type="form"/>
     <globalsequences/>
     <skins/>
 </application>

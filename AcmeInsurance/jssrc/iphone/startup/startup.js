@@ -17,7 +17,7 @@ var appConfig = {
     appName: "AcmeInsurance",
     appVersion: "1.0.0",
     platformVersion: null,
-    serverIp: "10.0.1.30",
+    serverIp: "172.16.100.51",
     serverPort: "8080",
     secureServerPort: "443",
     isDebug: true,

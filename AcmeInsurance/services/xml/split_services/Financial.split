@@ -6,6 +6,7 @@
         <cacheduration></cacheduration>
         <cacheable>false</cacheable>
         <dataprovider></dataprovider>
+        <dcResponse/>
         <encryptPwd>true</encryptPwd>
         <escapeXML>false</escapeXML>
         <group>other</group>
@@ -147,21 +148,6 @@
          &lt;/collection&gt;
          &lt;collection id="relatedAccounts"&gt;
             &lt;record&gt;
-               &lt;policyID&gt;12345&lt;/policyID&gt;
-               &lt;policyNumber&gt;21212&lt;/policyNumber&gt;
-               &lt;policyType&gt;Auto Policy&lt;/policyType&gt;
-               &lt;status&gt;Active&lt;/status&gt;
-               &lt;policyDue&gt;201.12&lt;/policyDue&gt;
-               &lt;billID&gt;124&lt;/billID&gt;
-               &lt;vehicleID&gt;98766&lt;/vehicleID&gt;
-               &lt;vehicleName&gt;Nissan Altima&lt;/vehicleName&gt;
-               &lt;coverageAmount&gt;56543.00&lt;/coverageAmount&gt;
-               &lt;policyUntil&gt;15-Feb-2012&lt;/policyUntil&gt;
-               &lt;placeHolderText&gt;Thank you&lt;/placeHolderText&gt;
-               &lt;insuranceCardSrc&gt;http://vertapp.konylabs.net/KonyInsuranceWeb/images/insurecard.png&lt;/insuranceCardSrc&gt;
-               &lt;canPay&gt;YES&lt;/canPay&gt;
-            &lt;/record&gt;
-            &lt;record&gt;
                &lt;policyID&gt;12323&lt;/policyID&gt;
                &lt;policyNumber&gt;12323&lt;/policyNumber&gt;
                &lt;policyType&gt;Bike Policy&lt;/policyType&gt;
@@ -172,6 +158,21 @@
                &lt;vehicleName&gt;Toyota P3&lt;/vehicleName&gt;
                &lt;coverageAmount&gt;43434.00&lt;/coverageAmount&gt;
                &lt;policyUntil&gt;27-Feb-2012&lt;/policyUntil&gt;
+               &lt;placeHolderText&gt;Thank you&lt;/placeHolderText&gt;
+               &lt;insuranceCardSrc&gt;http://vertapp.konylabs.net/KonyInsuranceWeb/images/insurecard.png&lt;/insuranceCardSrc&gt;
+               &lt;canPay&gt;YES&lt;/canPay&gt;
+            &lt;/record&gt;
+            &lt;record&gt;
+               &lt;policyID&gt;12345&lt;/policyID&gt;
+               &lt;policyNumber&gt;21212&lt;/policyNumber&gt;
+               &lt;policyType&gt;Auto Policy&lt;/policyType&gt;
+               &lt;status&gt;Active&lt;/status&gt;
+               &lt;policyDue&gt;201.12&lt;/policyDue&gt;
+               &lt;billID&gt;124&lt;/billID&gt;
+               &lt;vehicleID&gt;98766&lt;/vehicleID&gt;
+               &lt;vehicleName&gt;Nissan Altima&lt;/vehicleName&gt;
+               &lt;coverageAmount&gt;56543.00&lt;/coverageAmount&gt;
+               &lt;policyUntil&gt;15-Feb-2012&lt;/policyUntil&gt;
                &lt;placeHolderText&gt;Thank you&lt;/placeHolderText&gt;
                &lt;insuranceCardSrc&gt;http://vertapp.konylabs.net/KonyInsuranceWeb/images/insurecard.png&lt;/insuranceCardSrc&gt;
                &lt;canPay&gt;YES&lt;/canPay&gt;

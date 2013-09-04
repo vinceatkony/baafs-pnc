@@ -5,7 +5,7 @@
     <attributes name="ACCESS_NETWORK_STATE" value="true"/>
     <attributes name="ACCESS_WIFI_STATE" value="false"/>
     <attributes name="SET_WALLPAPER_HINTS" value="false"/>
-    <attributes name="mwaddrkey" value="10.0.1.30"/>
+    <attributes name="mwaddrkey" value="172.16.100.51"/>
     <attributes name="win8packagenamekey" value="AcmeInsurance"/>
     <attributes name="portkey" value=""/>
     <attributes name="WP8_ID_CAP_LOCATION" value="true"/>
@@ -22,12 +22,12 @@
     <attributes name="PERSISTENT_ACTIVITY" value="false"/>
     <attributes name="Internet(Client_AND_Server)" value="true"/>
     <attributes name="READ_SMS" value="false"/>
-    <attributes name="ID_CAP_ISV_CAMERA" value="true"/>
     <attributes name="applepushfunc" value="None"/>
+    <attributes name="ID_CAP_ISV_CAMERA" value="true"/>
     <attributes name="Internet(Client)" value="true"/>
     <attributes name="urlschemanameorder" value=""/>
-    <attributes name="win8packagelogokey" value=""/>
     <attributes name="desktopwebwidthoption" value="Percentage"/>
+    <attributes name="win8packagelogokey" value=""/>
     <attributes name="MODIFY_AUDIO_SETTINGS" value="false"/>
     <attributes name="CAMERA" value="false"/>
     <attributes name="tcnth480basefontsize" value="17"/>
@@ -94,9 +94,9 @@
     <attributes name="WRITE_GSERVICES" value="false"/>
     <attributes name="wp8packageversionkey" value=""/>
     <attributes name="BROADCAST_STICKY" value="false"/>
-    <attributes name="CHANGE_CONFIGURATION" value="false"/>
-    <attributes name="GET_ACCOUNTS" value="false"/>
     <attributes name="SET_PROCESS_LIMIT" value="false"/>
+    <attributes name="GET_ACCOUNTS" value="false"/>
+    <attributes name="CHANGE_CONFIGURATION" value="false"/>
     <attributes name="MOUNT_FORMAT_FILESYSTEMS" value="false"/>
     <attributes name="BROADCAST_PACKAGE_REMOVED" value="false"/>
     <attributes name="PROCESS_OUTGOING_CALLS" value="false"/>
@@ -156,6 +156,7 @@
     <attributes name="spaandroidtab1280basefontsize" value="18"/>
     <attributes name="Shared_User_Certificates" value="true"/>
     <attributes name="inputaccessoryviewtype" value="nextprevtoolbar"/>
+    <attributes name="android_allowselfsignedcertificates" value="None"/>
     <attributes name="imagewhendownloading" value=""/>
     <attributes name="READ_INPUT_STATE" value="false"/>
     <attributes name="WP8_ID_CAP_IDENTITY_DEVICE" value="true"/>
@@ -191,8 +192,8 @@
     <attributes name="tcnth240basefontsize" value="12"/>
     <attributes name="tcbb480basefontsize" value="17"/>
     <attributes name="WP8_ID_CAP_MAP" value="true"/>
-    <attributes name="desktopwebnoscriptmessage" value="To use this site, first enable your browser&#039;s JavaScript support and then refresh this page."/>
     <attributes name="tcandroid640basefontsize" value="19"/>
+    <attributes name="desktopwebnoscriptmessage" value="To use this site, first enable your browser&#039;s JavaScript support and then refresh this page."/>
     <attributes name="tcbb360basefontsize" value="13"/>
     <attributes name="WP8_ID_CAP_PHONEDIALER" value="true"/>
     <attributes name="winmangotiletitlekey" value="AcmeInsurance"/>
