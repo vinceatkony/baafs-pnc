@@ -1,43 +1,39 @@
 //Form JS File
-function frmPolicy_frmPolicy_preshow_seq1(status, GetPolicy) {
+function frmPolicy_frmPolicy_postshow_seq1(status, GetPolicy) {
     if (status == 400) {
-        frmPolicy.lblDescription.text = GetPolicy["policyList"][0]["description"];
+        kony.print("************ before mappings...");
         if (GetPolicy != null && GetPolicy != undefined && GetPolicy["policyList"] != null && GetPolicy["policyList"] != undefined) {
-            var frmPolicy_segment220982117452368_temp = [];
+            var frmPolicy_segPolicyInfo_temp = [];
             for (var i1 = 0; i1 < GetPolicy["policyList"].length; i1++) {
-                frmPolicy_segment220982117452368_temp.push({
-                    "lblCoinsuranceValue": GetPolicy["policyList"][i1]["coinsurance"],
-                    "lblCoinsurance": "Co-insurance: ",
-                    "lblDentalBenefitValue": GetPolicy["policyList"][i1]["dentalBenefit"],
-                    "lblLTD": "Long Term Disability",
-                    "lblDentalBenefit": "Dental Benefit: ",
-                    "lblInsuranceCardHeader": "Insurance Card",
-                    "lblLTDPercentage": "LTD Benefit Percentage: ",
-                    "imgInsuranceCard": GetPolicy["policyList"][i1]["insuranceCardSrc"],
-                    "lblDental": "Dental Benefits: ",
-                    "lblADDBenefitValue": GetPolicy["policyList"][i1]["addBenefit"],
-                    "lblLTDMaxBenefitValue": GetPolicy["policyList"][i1]["ltdMaxBenefit"],
-                    "lblADDBenefit": "AD&D Benefit: ",
-                    "lblLTDMaxBenefit": "LTD Max Benefit",
-                    "lblLifeBenefit": "Life Benefit: ",
-                    "lblDeductableValue": GetPolicy["policyList"][i1]["dentalDeductable"],
-                    "lblLife": "Life Benefits: ",
-                    "lblLifeBenefitValue": GetPolicy["policyList"][i1]["lifeBenefit"],
-                    "lblLTDBenefitPercentageVAlue": GetPolicy["policyList"][i1]["ltdBenefitPercentage"],
-                    "lblDentalDeductable": "Dental Deductable"
+                frmPolicy_segPolicyInfo_temp.push({
+                    "lblDwelling": "Dwelling: ",
+                    "lblOtherStructuresValue": GetPolicy["policyList"][i1]["otherStructuresLimit"],
+                    "lblPersonalLiabilityValue": GetPolicy["policyList"][i1]["personalLiability"],
+                    "lblDwellingValue": GetPolicy["policyList"][i1]["dwellingLimit"],
+                    "lblPersonalProperty": "Personal Property: ",
+                    "lblPersonalLiability": "Personal Liability: ",
+                    "lblPersonalPropertyValue": GetPolicy["policyList"][i1]["personalPropertyLimit"],
+                    "lblLossOfUseValue": GetPolicy["policyList"][i1]["lossOfUseLimit"],
+                    "lblSectionTwo": "Liability Coverages",
+                    "lblOtherStructures": "Other Structures: ",
+                    "lblMedPayToOthersValue": GetPolicy["policyList"][i1]["medicalPayToOthers"],
+                    "lblSectionOne": "Property Coverage Limits",
+                    "lblMedPayToOthers": "Medical Pay To Others: ",
+                    "lblLossOfUse": "Loss of Use: "
                 })
             }
-            frmPolicy.segment220982117452368.setData(frmPolicy_segment220982117452368_temp);
+            frmPolicy.segPolicyInfo.setData(frmPolicy_segPolicyInfo_temp);
         }
+        kony.print("************ AFTER mappings...");
     }
 };
 
-function frmPolicy_frmPolicy_preshow_seq0(eventobject, neworientation) {
+function frmPolicy_frmPolicy_postshow_seq0(eventobject, neworientation) {
     var GetPolicy_inputparam = {};
     GetPolicy_inputparam["serviceID"] = "GetPolicy";
     GetPolicy_inputparam["httpheaders"] = {};
     GetPolicy_inputparam["httpconfigs"] = {};
-    GetPolicy = appmiddlewareinvokerasync(GetPolicy_inputparam, frmPolicy_frmPolicy_preshow_seq1);
+    GetPolicy = appmiddlewareinvokerasync(GetPolicy_inputparam, frmPolicy_frmPolicy_postshow_seq1);
 };
 
 function addWidgetsfrmPolicy() {
@@ -80,13 +76,12 @@ function addWidgetsfrmPolicy() {
         "position": constants.BOX_POSITION_AS_NORMAL,
         "orientation": constants.BOX_LAYOUT_HORIZONTAL
     }, {
-        "containerWeight": 15,
+        "containerWeight": 12,
         "percent": true,
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -107,49 +102,43 @@ function addWidgetsfrmPolicy() {
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "marginInPixel": false,
         "paddingInPixel": true,
-        "containerWeight": 4
+        "containerWeight": 3
     }, {});
-    var segment220982117452368box = new kony.ui.Box({
-        "id": "segment220982117452368box",
+    var segPolicyInfobox = new kony.ui.Box({
+        "id": "segPolicyInfobox",
         "isVisible": true,
         "orientation": constants.BOX_LAYOUT_VERTICAL
     }, {
         "layoutAlignment": constants.BOX_LAYOUT_ALIGN_FROM_LEFT,
-        "containerWeight": 73
+        "containerWeight": 60
     }, {});
-    var segment220982117452368 = new kony.ui.SegmentedUI2({
-        "id": "segment220982117452368",
+    var segPolicyInfo = new kony.ui.SegmentedUI2({
+        "id": "segPolicyInfo",
         "isVisible": true,
         "retainSelection": false,
         "widgetDataMap": {
-            "lblLTDPercentage": "lblLTDPercentage",
+            "lblDwelling": "lblDwelling",
+            "lblOtherStructuresValue": "lblOtherStructuresValue",
+            "lblPersonalLiabilityValue": "lblPersonalLiabilityValue",
             "hbox2098211745622": "hbox2098211745622",
-            "lblADDBenefitValue": "lblADDBenefitValue",
-            "lblADDBenefit": "lblADDBenefit",
+            "lblDwellingValue": "lblDwellingValue",
+            "lblPersonalLiability": "lblPersonalLiability",
+            "lblPersonalProperty": "lblPersonalProperty",
+            "lblPersonalPropertyValue": "lblPersonalPropertyValue",
+            "lblLossOfUseValue": "lblLossOfUseValue",
+            "lblSectionTwo": "lblSectionTwo",
             "hbox2098211745756": "hbox2098211745756",
-            "lblLife": "lblLife",
-            "hbox20982117452383": "hbox20982117452383",
-            "lblLTDBenefitPercentageVAlue": "lblLTDBenefitPercentageVAlue",
-            "hbox20982117452369": "hbox20982117452369",
-            "lblCoinsuranceValue": "lblCoinsuranceValue",
-            "lblDentalBenefitValue": "lblDentalBenefitValue",
-            "lblCoinsurance": "lblCoinsurance",
-            "lblLTD": "lblLTD",
-            "lblDentalBenefit": "lblDentalBenefit",
-            "lblInsuranceCardHeader": "lblInsuranceCardHeader",
-            "imgInsuranceCard": "imgInsuranceCard",
-            "lblDental": "lblDental",
-            "lblLTDMaxBenefitValue": "lblLTDMaxBenefitValue",
-            "lblLTDMaxBenefit": "lblLTDMaxBenefit",
-            "hbox2098211745678": "hbox2098211745678",
-            "lblLifeBenefit": "lblLifeBenefit",
-            "lblDeductableValue": "lblDeductableValue",
+            "lblOtherStructures": "lblOtherStructures",
+            "lblMedPayToOthersValue": "lblMedPayToOthersValue",
             "hbox20982117452372": "hbox20982117452372",
-            "lblLifeBenefitValue": "lblLifeBenefitValue",
-            "lblDentalDeductable": "lblDentalDeductable",
+            "hbox20982117452383": "hbox20982117452383",
+            "lblMedPayToOthers": "lblMedPayToOthers",
+            "lblSectionOne": "lblSectionOne",
+            "lblLossOfUse": "lblLossOfUse",
+            "hbox20982117452369": "hbox20982117452369",
             "hbox20982117452375": "hbox20982117452375"
         },
-        "rowTemplate": segment220982117452368box,
+        "rowTemplate": segPolicyInfobox,
         "widgetSkin": "segWhite",
         "rowSkin": "seg2Normal",
         "rowFocusSkin": "seg2Focus",
@@ -158,19 +147,19 @@ function addWidgetsfrmPolicy() {
         "separatorThickness": 1,
         "separatorColor": "64646400",
         "showScrollbars": false,
-        "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW,
         "groupCells": false,
         "screenLevelWidget": false,
-        "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR
+        "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR,
+        "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW
     }, {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "marginInPixel": false,
         "paddingInPixel": false,
-        "containerWeight": 73
+        "containerWeight": 60
     }, {});
-    var lblDental = new kony.ui.Label({
-        "id": "lblDental",
+    var lblSectionOne = new kony.ui.Label({
+        "id": "lblSectionOne",
         "isVisible": true,
         "skin": "lblRed"
     }, {
@@ -179,13 +168,13 @@ function addWidgetsfrmPolicy() {
         "hExpand": true,
         "margin": [0, 0, 0, 0],
         "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
         "marginInPixel": false,
         "paddingInPixel": true,
         "containerWeight": 5
     }, {});
-    var lblDentalDeductable = new kony.ui.Label({
-        "id": "lblDentalDeductable",
+    var lblDwelling = new kony.ui.Label({
+        "id": "lblDwelling",
         "isVisible": true,
         "skin": "lblBold"
     }, {
@@ -197,10 +186,10 @@ function addWidgetsfrmPolicy() {
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "marginInPixel": false,
         "paddingInPixel": true,
-        "containerWeight": 40
+        "containerWeight": 49
     }, {});
-    var lblDeductableValue = new kony.ui.Label({
-        "id": "lblDeductableValue",
+    var lblDwellingValue = new kony.ui.Label({
+        "id": "lblDwellingValue",
         "isVisible": true,
         "skin": "lblBlack"
     }, {
@@ -209,10 +198,10 @@ function addWidgetsfrmPolicy() {
         "hExpand": true,
         "margin": [0, 0, 0, 0],
         "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
         "marginInPixel": false,
         "paddingInPixel": true,
-        "containerWeight": 59
+        "containerWeight": 50
     }, {});
     var hbox20982117452369 = new kony.ui.Box({
         "id": "hbox20982117452369",
@@ -226,15 +215,14 @@ function addWidgetsfrmPolicy() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox20982117452369.add(
-    lblDentalDeductable, lblDeductableValue);
-    var lblCoinsurance = new kony.ui.Label({
-        "id": "lblCoinsurance",
+    lblDwelling, lblDwellingValue);
+    var lblOtherStructures = new kony.ui.Label({
+        "id": "lblOtherStructures",
         "isVisible": true,
         "skin": "lblBold"
     }, {
@@ -246,10 +234,10 @@ function addWidgetsfrmPolicy() {
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "marginInPixel": false,
         "paddingInPixel": true,
-        "containerWeight": 40
+        "containerWeight": 49
     }, {});
-    var lblCoinsuranceValue = new kony.ui.Label({
-        "id": "lblCoinsuranceValue",
+    var lblOtherStructuresValue = new kony.ui.Label({
+        "id": "lblOtherStructuresValue",
         "isVisible": true,
         "skin": "lblBlack"
     }, {
@@ -258,10 +246,10 @@ function addWidgetsfrmPolicy() {
         "hExpand": true,
         "margin": [0, 0, 0, 0],
         "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
         "marginInPixel": false,
         "paddingInPixel": true,
-        "containerWeight": 59
+        "containerWeight": 50
     }, {});
     var hbox20982117452372 = new kony.ui.Box({
         "id": "hbox20982117452372",
@@ -275,15 +263,14 @@ function addWidgetsfrmPolicy() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox20982117452372.add(
-    lblCoinsurance, lblCoinsuranceValue);
-    var lblDentalBenefit = new kony.ui.Label({
-        "id": "lblDentalBenefit",
+    lblOtherStructures, lblOtherStructuresValue);
+    var lblPersonalProperty = new kony.ui.Label({
+        "id": "lblPersonalProperty",
         "isVisible": true,
         "skin": "lblBold"
     }, {
@@ -295,10 +282,10 @@ function addWidgetsfrmPolicy() {
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "marginInPixel": false,
         "paddingInPixel": true,
-        "containerWeight": 40
+        "containerWeight": 49
     }, {});
-    var lblDentalBenefitValue = new kony.ui.Label({
-        "id": "lblDentalBenefitValue",
+    var lblPersonalPropertyValue = new kony.ui.Label({
+        "id": "lblPersonalPropertyValue",
         "isVisible": true,
         "skin": "lblBlack"
     }, {
@@ -307,10 +294,10 @@ function addWidgetsfrmPolicy() {
         "hExpand": true,
         "margin": [0, 0, 0, 0],
         "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
         "marginInPixel": false,
         "paddingInPixel": true,
-        "containerWeight": 59
+        "containerWeight": 50
     }, {});
     var hbox20982117452375 = new kony.ui.Box({
         "id": "hbox20982117452375",
@@ -324,17 +311,16 @@ function addWidgetsfrmPolicy() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox20982117452375.add(
-    lblDentalBenefit, lblDentalBenefitValue);
-    var lblLife = new kony.ui.Label({
-        "id": "lblLife",
+    lblPersonalProperty, lblPersonalPropertyValue);
+    var lblLossOfUse = new kony.ui.Label({
+        "id": "lblLossOfUse",
         "isVisible": true,
-        "skin": "lblRed"
+        "skin": "lblBold"
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -344,10 +330,58 @@ function addWidgetsfrmPolicy() {
         "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
         "marginInPixel": false,
         "paddingInPixel": true,
+        "containerWeight": 49
+    }, {});
+    var lblLossOfUseValue = new kony.ui.Label({
+        "id": "lblLossOfUseValue",
+        "isVisible": true,
+        "skin": "lblBlack"
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [6, 15, 6, 15],
+        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
+        "marginInPixel": false,
+        "paddingInPixel": true,
+        "containerWeight": 50
+    }, {});
+    var hbox2098211745756 = new kony.ui.Box({
+        "id": "hbox2098211745756",
+        "isVisible": true,
+        "position": constants.BOX_POSITION_AS_NORMAL,
+        "orientation": constants.BOX_LAYOUT_HORIZONTAL
+    }, {
+        "containerWeight": 10,
+        "percent": true,
+        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
+        "margin": [0, 0, 0, 0],
+        "padding": [0, 0, 0, 0],
+        "vExpand": false,
+        "marginInPixel": false,
+        "paddingInPixel": false,
+        "layoutType": constants.CONTAINER_LAYOUT_BOX
+    }, {});
+    hbox2098211745756.add(
+    lblLossOfUse, lblLossOfUseValue);
+    var lblSectionTwo = new kony.ui.Label({
+        "id": "lblSectionTwo",
+        "isVisible": true,
+        "skin": "lblRed"
+    }, {
+        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
+        "vExpand": false,
+        "hExpand": true,
+        "margin": [0, 0, 0, 0],
+        "padding": [6, 15, 6, 15],
+        "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+        "marginInPixel": false,
+        "paddingInPixel": true,
         "containerWeight": 5
     }, {});
-    var lblLifeBenefit = new kony.ui.Label({
-        "id": "lblLifeBenefit",
+    var lblPersonalLiability = new kony.ui.Label({
+        "id": "lblPersonalLiability",
         "isVisible": true,
         "skin": "lblBold"
     }, {
@@ -361,8 +395,8 @@ function addWidgetsfrmPolicy() {
         "paddingInPixel": true,
         "containerWeight": 40
     }, {});
-    var lblLifeBenefitValue = new kony.ui.Label({
-        "id": "lblLifeBenefitValue",
+    var lblPersonalLiabilityValue = new kony.ui.Label({
+        "id": "lblPersonalLiabilityValue",
         "isVisible": true,
         "skin": "lblBlack"
     }, {
@@ -388,15 +422,14 @@ function addWidgetsfrmPolicy() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox20982117452383.add(
-    lblLifeBenefit, lblLifeBenefitValue);
-    var lblADDBenefit = new kony.ui.Label({
-        "id": "lblADDBenefit",
+    lblPersonalLiability, lblPersonalLiabilityValue);
+    var lblMedPayToOthers = new kony.ui.Label({
+        "id": "lblMedPayToOthers",
         "isVisible": true,
         "skin": "lblBold"
     }, {
@@ -410,8 +443,8 @@ function addWidgetsfrmPolicy() {
         "paddingInPixel": true,
         "containerWeight": 40
     }, {});
-    var lblADDBenefitValue = new kony.ui.Label({
-        "id": "lblADDBenefitValue",
+    var lblMedPayToOthersValue = new kony.ui.Label({
+        "id": "lblMedPayToOthersValue",
         "isVisible": true,
         "skin": "lblBlack"
     }, {
@@ -437,174 +470,28 @@ function addWidgetsfrmPolicy() {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
     }, {});
     hbox2098211745622.add(
-    lblADDBenefit, lblADDBenefitValue);
-    var lblLTD = new kony.ui.Label({
-        "id": "lblLTD",
-        "isVisible": true,
-        "skin": "lblRed"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [0, 0, 0, 0],
-        "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": false,
-        "paddingInPixel": true,
-        "containerWeight": 5
-    }, {});
-    var lblLTDMaxBenefit = new kony.ui.Label({
-        "id": "lblLTDMaxBenefit",
-        "isVisible": true,
-        "skin": "lblBold"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [0, 0, 0, 0],
-        "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": false,
-        "paddingInPixel": true,
-        "containerWeight": 40
-    }, {});
-    var lblLTDMaxBenefitValue = new kony.ui.Label({
-        "id": "lblLTDMaxBenefitValue",
-        "isVisible": true,
-        "skin": "lblBlack"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [0, 0, 0, 0],
-        "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": false,
-        "paddingInPixel": true,
-        "containerWeight": 59
-    }, {});
-    var hbox2098211745678 = new kony.ui.Box({
-        "id": "hbox2098211745678",
-        "isVisible": true,
-        "position": constants.BOX_POSITION_AS_NORMAL,
-        "orientation": constants.BOX_LAYOUT_HORIZONTAL
-    }, {
-        "containerWeight": 10,
-        "percent": true,
-        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 0, 0, 0],
-        "padding": [0, 0, 0, 0],
-        "vExpand": false,
-        "hExpand": true,
-        "marginInPixel": false,
-        "paddingInPixel": false,
-        "layoutType": constants.CONTAINER_LAYOUT_BOX
-    }, {});
-    hbox2098211745678.add(
-    lblLTDMaxBenefit, lblLTDMaxBenefitValue);
-    var lblLTDPercentage = new kony.ui.Label({
-        "id": "lblLTDPercentage",
-        "isVisible": true,
-        "skin": "lblBold"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [0, 0, 0, 0],
-        "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": false,
-        "paddingInPixel": true,
-        "containerWeight": 40
-    }, {});
-    var lblLTDBenefitPercentageVAlue = new kony.ui.Label({
-        "id": "lblLTDBenefitPercentageVAlue",
-        "isVisible": true,
-        "skin": "lblBlack"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [0, 0, 0, 0],
-        "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": false,
-        "paddingInPixel": true,
-        "containerWeight": 59
-    }, {});
-    var hbox2098211745756 = new kony.ui.Box({
-        "id": "hbox2098211745756",
-        "isVisible": true,
-        "position": constants.BOX_POSITION_AS_NORMAL,
-        "orientation": constants.BOX_LAYOUT_HORIZONTAL
-    }, {
-        "containerWeight": 10,
-        "percent": true,
-        "widgetAlignment": constants.WIDGET_ALIGN_TOP_LEFT,
-        "margin": [0, 0, 0, 0],
-        "padding": [0, 0, 0, 0],
-        "vExpand": false,
-        "hExpand": true,
-        "marginInPixel": false,
-        "paddingInPixel": false,
-        "layoutType": constants.CONTAINER_LAYOUT_BOX
-    }, {});
-    hbox2098211745756.add(
-    lblLTDPercentage, lblLTDBenefitPercentageVAlue);
-    var lblInsuranceCardHeader = new kony.ui.Label({
-        "id": "lblInsuranceCardHeader",
-        "isVisible": true,
-        "skin": "lblRed"
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "vExpand": false,
-        "hExpand": true,
-        "margin": [0, 0, 0, 0],
-        "padding": [6, 15, 6, 15],
-        "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-        "marginInPixel": false,
-        "paddingInPixel": true,
-        "containerWeight": 5
-    }, {});
-    var imgInsuranceCard = new kony.ui.Image2({
-        "id": "imgInsuranceCard",
-        "isVisible": true,
-        "imageWhenFailed": null,
-        "imageWhileDownloading": null,
-        "src": null
-    }, {
-        "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
-        "margin": [0, 0, 0, 0],
-        "padding": [0, 0, 0, 0],
-        "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
-        "referenceWidth": null,
-        "referenceHeight": null,
-        "marginInPixel": false,
-        "paddingInPixel": false,
-        "containerWeight": 12
-    }, {});
-    segment220982117452368box.add(
-    lblDental, hbox20982117452369, hbox20982117452372, hbox20982117452375, lblLife, hbox20982117452383, hbox2098211745622, lblLTD, hbox2098211745678, hbox2098211745756, lblInsuranceCardHeader, imgInsuranceCard);
+    lblMedPayToOthers, lblMedPayToOthersValue);
+    segPolicyInfobox.add(
+    lblSectionOne, hbox20982117452369, hbox20982117452372, hbox20982117452375, hbox2098211745756, lblSectionTwo, hbox20982117452383, hbox2098211745622);
     frmPolicy.add(
-    hbox2098211745116, lblDescription, segment220982117452368);
+    hbox2098211745116, lblDescription, segPolicyInfo);
 };
 
 function frmPolicyGlobals() {
     var MenuId = [];
     frmPolicy = new kony.ui.Form2({
         "id": "frmPolicy",
-        "title": "Acme Insurance",
+        "title": "PNC Insurance",
         "needAppMenu": true,
         "enabledForIdleTimeout": false,
         "type": constants.FORM_TYPE_NATIVE,
         "skin": "frmRed",
-        "preShow": frmPolicy_frmPolicy_preshow_seq0,
+        "postShow": frmPolicy_frmPolicy_postshow_seq0,
         "addWidgets": addWidgetsfrmPolicy
     }, {
         "padding": [0, 0, 0, 0],

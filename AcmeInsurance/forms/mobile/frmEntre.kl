@@ -22,7 +22,7 @@
         <width>true</width>
         <height>false</height>
     </overridePerferred>
-    <projectName>AcmeInsurance</projectName>
+    <projectName>PNCInsurance</projectName>
     <formName>frmEntre</formName>
     <platform>0</platform>
     <mode>0</mode>
@@ -5793,6 +5793,7 @@
                                 <destType>0</destType>
                                 <navigateFrom>None</navigateFrom>
                                 <navigateTo>frmLocations</navigateTo>
+                                <newOutputMapping/>
                                 <outputMapping/>
                                 <platform>0</platform>
                             </actionList>
@@ -6463,6 +6464,23 @@
                     </overridePerferred>
                     <contentAlign>4</contentAlign>
                     <parent_contentalignment>middle-center</parent_contentalignment>
+                    <event_onClick>
+                        <evtSequence>
+                            <actionList xsi:type="eventFormAction">
+                                <enabled>true</enabled>
+                                <name></name>
+                                <type>1</type>
+                                <destType>0</destType>
+                                <navigateFrom>frmEntre</navigateFrom>
+                                <navigateTo>frmPolicy</navigateTo>
+                                <newOutputMapping/>
+                                <outputMapping/>
+                                <platform>0</platform>
+                            </actionList>
+                            <enabled>true</enabled>
+                            <seqname></seqname>
+                        </evtSequence>
+                    </event_onClick>
                     <parallel_exec>false</parallel_exec>
                     <iphone_glow_effect>false</iphone_glow_effect>
                     <iphone_3d_look>true</iphone_3d_look>

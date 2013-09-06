@@ -22,7 +22,7 @@
         <width>true</width>
         <height>false</height>
     </overridePerferred>
-    <projectName>AcmeInsurance</projectName>
+    <projectName>PNCInsurance</projectName>
     <formName>frmHome</formName>
     <platform>0</platform>
     <mode>0</mode>
@@ -429,8 +429,8 @@
                                     <name></name>
                                     <type>11</type>
                                     <newOutputMapping>
-                                        <collection srctype="service" srcwidgettype="" srcmode="" src="GetPolicy.policyList" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destwidgettype="Segment2" destplatform="" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap" append="false">
-                                            <mapping srctype="expression" srcdatatype="expression" srcwidgettype="" srcmode="" src="&quot;Policy Type: &quot;" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Label" destplatform="" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.lblPolicy.Common.text">
+                                        <collection append="false" dest="frmHome.segment220982117452368.Common.masterdatamap" destmode="" destplatform="" destwidgettype="Segment2" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="GetPolicy.policyList" srcmode="" srcwidgettype="" srctype="service">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.lblPolicy.Common.text" destmode="" destplatform="" destwidgettype="Label" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="&quot;Policy Type: &quot;" srcmode="" srcwidgettype="" srcdatatype="expression" srctype="expression">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>
@@ -438,7 +438,7 @@
                                                     </entry>
                                                 </srcMap>
                                             </mapping>
-                                            <mapping srctype="service" srcdatatype="string" srcwidgettype="" srcmode="" src="GetPolicy.policyList.policyType" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Label" destplatform="general" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.lblPolicyType.Common.text">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.lblPolicyType.Common.text" destmode="" destplatform="general" destwidgettype="Label" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="GetPolicy.policyList.policyType" srcmode="" srcwidgettype="" srcdatatype="string" srctype="service">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>
@@ -450,7 +450,7 @@
                                                     </entry>
                                                 </srcMap>
                                             </mapping>
-                                            <mapping srctype="expression" srcdatatype="expression" srcwidgettype="" srcmode="" src="&quot;Coverage Amount: &quot;" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Label" destplatform="" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.lblCoverage.Common.text">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.lblCoverage.Common.text" destmode="" destplatform="" destwidgettype="Label" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="&quot;Coverage Amount: &quot;" srcmode="" srcwidgettype="" srcdatatype="expression" srctype="expression">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>
@@ -458,7 +458,7 @@
                                                     </entry>
                                                 </srcMap>
                                             </mapping>
-                                            <mapping srctype="service" srcdatatype="string" srcwidgettype="" srcmode="" src="GetPolicy.policyList.coverageAmount" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Label" destplatform="general" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.lblCoverageAmount.Common.text">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.lblCoverageAmount.Common.text" destmode="" destplatform="general" destwidgettype="Label" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="GetPolicy.policyList.coverageAmount" srcmode="" srcwidgettype="" srcdatatype="string" srctype="service">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>
@@ -470,7 +470,7 @@
                                                     </entry>
                                                 </srcMap>
                                             </mapping>
-                                            <mapping srctype="expression" srcdatatype="expression" srcwidgettype="" srcmode="" src="&quot;Vehicle: &quot;" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Label" destplatform="" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.lblVehicle.Common.text">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.lblVehicle.Common.text" destmode="" destplatform="" destwidgettype="Label" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="&quot;Vehicle: &quot;" srcmode="" srcwidgettype="" srcdatatype="expression" srctype="expression">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>
@@ -478,7 +478,7 @@
                                                     </entry>
                                                 </srcMap>
                                             </mapping>
-                                            <mapping srctype="service" srcdatatype="string" srcwidgettype="" srcmode="" src="GetPolicy.policyList.vehicleName" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Label" destplatform="general" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.lblVehicleName.Common.text">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.lblVehicleName.Common.text" destmode="" destplatform="general" destwidgettype="Label" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="GetPolicy.policyList.vehicleName" srcmode="" srcwidgettype="" srcdatatype="string" srctype="service">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>
@@ -490,7 +490,7 @@
                                                     </entry>
                                                 </srcMap>
                                             </mapping>
-                                            <mapping srctype="service" srcdatatype="string" srcwidgettype="" srcmode="" src="GetPolicy.policyList.insuranceCardSrc" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Image2" destplatform="general" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.imgInsuranceCard.Common.src">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.imgInsuranceCard.Common.src" destmode="" destplatform="general" destwidgettype="Image2" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="GetPolicy.policyList.insuranceCardSrc" srcmode="" srcwidgettype="" srcdatatype="string" srctype="service">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>
@@ -502,7 +502,7 @@
                                                     </entry>
                                                 </srcMap>
                                             </mapping>
-                                            <mapping srctype="expression" srcdatatype="expression" srcwidgettype="" srcmode="" src="&quot;Policy in effect until: &quot;" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Label" destplatform="" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.lblPolicyWhen.Common.text">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.lblPolicyWhen.Common.text" destmode="" destplatform="" destwidgettype="Label" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="&quot;Policy in effect until: &quot;" srcmode="" srcwidgettype="" srcdatatype="expression" srctype="expression">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>
@@ -510,7 +510,7 @@
                                                     </entry>
                                                 </srcMap>
                                             </mapping>
-                                            <mapping srctype="service" srcdatatype="string" srcwidgettype="" srcmode="" src="GetPolicy.policyList.policyUntil" msrcprefix="" msrcplatform="0" mdestprefix="" mdestplatform="0" desttype="widget" destdatatype="string" destwidgettype="Label" destplatform="general" destmode="" dest="frmHome.segment220982117452368.Common.masterdatamap.lblLifeBenefitValue.Common.text">
+                                            <mapping dest="frmHome.segment220982117452368.Common.masterdatamap.lblLifeBenefitValue.Common.text" destmode="" destplatform="general" destwidgettype="Label" destdatatype="string" desttype="widget" mdestplatform="0" mdestprefix="" msrcplatform="0" msrcprefix="" src="GetPolicy.policyList.policyUntil" srcmode="" srcwidgettype="" srcdatatype="string" srctype="service">
                                                 <srcMap>
                                                     <entry>
                                                         <key>js</key>

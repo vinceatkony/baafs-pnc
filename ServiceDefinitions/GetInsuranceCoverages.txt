@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<Header xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.corillian.com/operations/2004/11">
+		<SessionKey>018cffc782c2a2a1b3891ad522b4db0f</SessionKey>
+		<ResultCode>0</ResultCode>
+		<ResultMessage>OK</ResultMessage>
+	</Header>
+	</soap:Header>
+	<soap:Body>
+		<GetAccountsResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.corillian.com/corillian/banking/messages/2004/05">
+			<Accounts xmlns="http://www.corillian.com/corillian/banking/domain/2004/05">
+				<Description>Scott's Benefits</Description>
+				<DisplayName>Scott's Benefits</DisplayName>
+				<DataAvailable>true</DataAvailable>
+				<Visible>true</Visible>	
+				
+				<Account>
+					<Index>1</Index>
+					<Number>0000123456771</Number>
+					<NumberMasked>56771</NumberMasked>
+					
+					<!-- Health -->
+					<HealthPlanType>PPO</HealthPlanType>
+					<AnnualLimit>None</AnnualLimit>
+					<InNetworkDeductibleSingle>$250</InNetworkDeductibleSingle>
+					<InNetworkDeductibleFamily>$750</InNetworkDeductibleFamily>
+					<InNetworkOutOfPocketLimitSingle>$3,000</InNetworkOutOfPocketLimitSingle>
+					<InNetworkOutOfPocketLimitFamily>$6,000</InNetworkOutOfPocketLimitFamily>
+					<InNetworkPrimaryCareCopay>$20 per visit</InNetworkPrimaryCareCopay>
+					<InNetworkSpecialistCopay>$20 per visit</InNetworkSpecialistCopay>
+					<InNetworkPreventiveCopay>No charge</InNetworkPreventiveCopay>
+					<OutOfNetworkDeductibleSingle>$750</OutOfNetworkDeductibleSingle>
+					<OutOfNetworkDeductibleFamily>$2,250</OutOfNetworkDeductibleFamily>
+					<OutOfNetworkOutOfPocketLimitSingle>$6,000</OutOfNetworkOutOfPocketLimitSingle>
+					<OutOfNetworkOutOfPocketLimitFamily>$12,000</OutOfNetworkOutOfPocketLimitFamily>
+					<OutOfNetworkPrimaryCareCopay>40% coinsurance</OutOfNetworkPrimaryCareCopay>
+					<OutOfNetworkSpecialistCopay>40% coinsurance</OutOfNetworkSpecialistCopay>
+					<OutOfNetworkPreventiveCopay>40% coinsurance</OutOfNetworkPreventiveCopay>	
+					<InsuranceCard>http://vertapp.konylabs.net/KonyInsuranceWeb/images/insurecard.png</InsuranceCard>					
+
+					<!-- Dental -->
+					<DentalDeductable>0</DentalDeductable>
+					<DentalCoInsurance>100%</DentalCoInsurance>
+					<MaximumDentalBenefit>$1500</MaximumDentalBenefit>					
+
+					<!-- Disability -->
+					<LTDMaxBenefit>$10,000</LTDMaxBenefit>
+					<LTDBenefitPercentage>60%</LTDBenefitPercentage>
+					<LTDEliminationPeriod>3 months</LTDEliminationPeriod>
+					<LTDOccupationPeriod>2 years</LTDOccupationPeriod>
+					<LTDDrugAlcohol>24 months</LTDDrugAlcohol>
+
+					<!-- Life -->
+					<LifeBenefit>$200,000</LifeBenefit>
+					<ADDBenefit>$200,000</ADDBenefit>		
+
+					<!-- Homeowners PNC -->
+					<DwellingLimit>$500,000</DwellingLimit>
+					<OtherStructuresLimit>$75,000</OtherStructuresLimit>
+					<PersonalPropertyLimit>$325,000</PersonalPropertyLimit>
+					<LossOfUseLimit>$150,000</LossOfUseLimit>
+					<PersonalLiability>$500,000 each occurrence</PersonalLiability>
+					<MedicalPayToOthers>$2,500 each person</MedicalPayToOthers>
+				</Account>
+			</Accounts>
+		</GetAccountsResponse>
+	</soap:Body>
+</soap:Envelope>

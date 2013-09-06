@@ -131,7 +131,6 @@ function addWidgetsfrmLocations() {
         "margin": [1, 1, 1, 1],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": true,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -242,7 +241,6 @@ function addWidgetsfrmLocations() {
         "margin": [1, 1, 1, 1],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": true,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -278,7 +276,6 @@ function addWidgetsfrmLocations() {
         "margin": [1, 1, 1, 1],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": true,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -293,7 +290,7 @@ function frmLocationsGlobals() {
     var MenuId = [];
     frmLocations = new kony.ui.Form2({
         "id": "frmLocations",
-        "title": null,
+        "title": "PNC Insurance",
         "needAppMenu": true,
         "enabledForIdleTimeout": false,
         "type": constants.FORM_TYPE_NATIVE,

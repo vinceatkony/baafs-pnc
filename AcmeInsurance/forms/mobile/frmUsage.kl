@@ -22,7 +22,7 @@
         <width>true</width>
         <height>false</height>
     </overridePerferred>
-    <projectName>AcmeInsurance</projectName>
+    <projectName>PNCInsurance</projectName>
     <formName>frmUsage</formName>
     <platform>0</platform>
     <mode>0</mode>
@@ -3997,6 +3997,12 @@
             <behavior>0</behavior>
             <selection_indctrId>None</selection_indctrId>
             <render_seperator>true</render_seperator>
+            <c_viewConfig></c_viewConfig>
+            <rowItemWidth></rowItemWidth>
+            <coverflowDepth></coverflowDepth>
+            <coverflowAngle></coverflowAngle>
+            <containerHeightReference>SEGUI_HEIGHT_BY_FORM_REFERENCE</containerHeightReference>
+            <containerHeight></containerHeight>
             <iphone_executeonClosure>0</iphone_executeonClosure>
             <iphone_enableDictionary>false</iphone_enableDictionary>
             <iphone_npi>true</iphone_npi>
@@ -4036,6 +4042,7 @@
             <tooltip></tooltip>
             <android_pressed_skin>Skin Defaults</android_pressed_skin>
             <android_dockingHeader>false</android_dockingHeader>
+            <android_view>0</android_view>
             <blockedUISkin>Skin Defaults</blockedUISkin>
             <tc_border>3</tc_border>
             <tc_defaultSelection>true</tc_defaultSelection>

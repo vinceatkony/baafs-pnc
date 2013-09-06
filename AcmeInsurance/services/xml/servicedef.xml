@@ -3,68 +3,6 @@
       <config-param name="APP_SMS_HEADER" value="null"/>
    </app-config>
    <services>
-      <service cachable="false" cacheduration="" id="Financial" passwordencrypted="true" smscode="" smsenabled="false" type="plainxmlserviceConnector">
-         <service-config>
-            <config-param name="endpointUrl" value="http://vertapp.konylabs.net/KonyInsuranceWeb/GetPolicyList?userID=kony"/>
-            <config-param name="postprocessorname" value=""/>
-            <config-param name="preprocessorname" value=""/>
-            <config-param name="urlprovider" value=""/>
-            <config-param name="dataprovider" value=""/>
-            <config-param name="sockettimeout" value=""/>
-            <config-param name="proxyname" value=""/>
-            <config-param name="proxyport" value=""/>
-            <config-param name="proxyusername" value=""/>
-            <config-param name="http.method" value="GET"/>
-            <config-param name="isembedxmlpresent" value="false"/>
-            <config-param name="responseEncoding" value="UTF-8"/>
-            <config-param name="server.auth.mode" value="basic"/>
-            <config-param name="server.auth.host" value=""/>
-            <config-param name="server.auth.ntlm.domain" value=""/>
-         </service-config>
-         <service-input/>
-         <service-output>
-            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
-            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
-            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
-         </service-output>
-      </service>
-      <service cachable="false" cacheduration="" id="getAutoPolicy" passwordencrypted="true" smscode="" smsenabled="false" type="plainxmlserviceConnector">
-         <service-config>
-            <config-param name="endpointUrl" value="http://localhost:8080/GetAutoPolicy.txt"/>
-            <config-param name="postprocessorname" value=""/>
-            <config-param name="preprocessorname" value=""/>
-            <config-param name="urlprovider" value=""/>
-            <config-param name="dataprovider" value=""/>
-            <config-param name="sockettimeout" value=""/>
-            <config-param name="proxyname" value=""/>
-            <config-param name="proxyport" value=""/>
-            <config-param name="proxyusername" value=""/>
-            <config-param name="http.method" value="GET"/>
-            <config-param name="isembedxmlpresent" value="false"/>
-            <config-param name="responseEncoding" value="UTF-8"/>
-            <config-param name="server.auth.mode" value="basic"/>
-            <config-param name="server.auth.host" value=""/>
-            <config-param name="server.auth.ntlm.domain" value=""/>
-         </service-config>
-         <service-input/>
-         <service-output>
-            <dataset id="policyList" src="//GetPolicyResponse/Policies">
-               <param datatype="string" format="None" formatvalue="" name="index" sms-name="" src="Policy/Index" target="response"/>
-               <param datatype="string" format="None" formatvalue="" name="policyType" sms-name="" src="Policy/Type" target="response"/>
-               <param datatype="string" format="None" formatvalue="" name="description" sms-name="" src="Policy/Description" target="response"/>
-               <param datatype="string" format="None" formatvalue="" name="displayName" sms-name="" src="Policy/DisplayName" target="response"/>
-               <dataset id="benefits" src="Policy/Benefits">
-                  <param datatype="string" format="None" formatvalue="" name="benefitName" sms-name="" src="Benefit/Name" target="response"/>
-                  <param datatype="string" format="None" formatvalue="" name="benefitDeductible" sms-name="" src="Benefit/Deductible" target="response"/>
-                  <param datatype="string" format="None" formatvalue="" name="benefitLimit" sms-name="" src="Benefit/Limit" target="response"/>
-                  <param datatype="string" format="None" formatvalue="" name="benefitType" sms-name="" src="Benefit/Type" target="response"/>
-               </dataset>
-            </dataset>
-            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
-            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>
-            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" target=""/>
-         </service-output>
-      </service>
       <service cachable="false" cacheduration="" id="GetLocations" passwordencrypted="true" smscode="" smsenabled="false" type="plainxmlserviceConnector">
          <service-config>
             <config-param name="endpointUrl" value="http://localhost:8080/RetrieveLocations.txt"/>
@@ -78,6 +16,7 @@
             <config-param name="proxyusername" value=""/>
             <config-param name="http.method" value="GET"/>
             <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
             <config-param name="responseEncoding" value="UTF-8"/>
             <config-param name="server.auth.mode" value="basic"/>
             <config-param name="server.auth.host" value=""/>
@@ -101,7 +40,7 @@
       </service>
       <service cachable="true" cacheduration="" id="GetPolicy" passwordencrypted="false" smscode="" smsenabled="false" type="plainxmlserviceConnector">
          <service-config>
-            <config-param name="endpointUrl" value="http://localhost:8080/GetLifeInfo.txt"/>
+            <config-param name="endpointUrl" value="http://localhost:8080/GetInsuranceCoverages.txt"/>
             <config-param name="postprocessorname" value=""/>
             <config-param name="preprocessorname" value=""/>
             <config-param name="urlprovider" value=""/>
@@ -112,6 +51,7 @@
             <config-param name="proxyusername" value=""/>
             <config-param name="http.method" value="GET"/>
             <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
             <config-param name="responseEncoding" value="UTF-8"/>
             <config-param name="server.auth.mode" value="basic"/>
             <config-param name="server.auth.host" value=""/>
@@ -133,6 +73,12 @@
                <param datatype="string" format="None" formatvalue="" name="insuranceCardSrc" sms-name="" src="Account/InsuranceCard" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="policyNumber" sms-name="" src="Account/Number" target="response"/>
                <param datatype="string" format="None" formatvalue="" name="ltdDrugAlcohol" sms-name="" src="Account/LTDDrugAlcohol" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="dwellingLimit" sms-name="" src="Account/DwellingLimit" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="otherStructuresLimit" sms-name="" src="Account/OtherStructuresLimit" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="personalPropertyLimit" sms-name="" src="Account/PersonalPropertyLimit" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="lossOfUseLimit" sms-name="" src="Account/LossOfUseLimit" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="personalLiability" sms-name="" src="Account/PersonalLiability" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="medicalPayToOthers" sms-name="" src="Account/MedicalPayToOthers" target="response"/>
             </dataset>
             <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" target=""/>
             <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" target=""/>

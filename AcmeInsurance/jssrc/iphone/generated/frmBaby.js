@@ -63,7 +63,6 @@ function addWidgetsfrmBaby() {
         "margin": [1, 1, 1, 1],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": true,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -224,7 +223,6 @@ function addWidgetsfrmBaby() {
         "margin": [1, 1, 1, 1],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": true,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX

@@ -12,6 +12,7 @@
         <group>other</group>
         <httpmethod>GET</httpmethod>
         <id>GetLocations</id>
+        <ignoreProxy>false</ignoreProxy>
         <intemplate></intemplate>
         <ntlmDomain></ntlmDomain>
         <ntlmHost></ntlmHost>

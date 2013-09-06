@@ -3,6 +3,10 @@ function frmEntre_button20982117451545_onClick_seq0(eventobject) {
     frmLocations.show();
 };
 
+function frmEntre_button20982117451546_onClick_seq0(eventobject) {
+    frmPolicy.show();
+};
+
 function addWidgetsfrmEntre() {
     var vbox20982117451537 = new kony.ui.Box({
         "id": "vbox20982117451537",
@@ -67,7 +71,6 @@ function addWidgetsfrmEntre() {
         "margin": [1, 1, 1, 1],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": true,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -117,7 +120,8 @@ function addWidgetsfrmEntre() {
         "isVisible": true,
         "text": "My Policies",
         "skin": "btnHome",
-        "focusSkin": "btnFocus"
+        "focusSkin": "btnFocus",
+        "onClick": frmEntre_button20982117451546_onClick_seq0
     }, {
         "widgetAlignment": constants.WIDGET_ALIGN_CENTER,
         "vExpand": false,
@@ -220,7 +224,6 @@ function addWidgetsfrmEntre() {
         "margin": [1, 1, 1, 1],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": true,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX

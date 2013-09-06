@@ -12,6 +12,7 @@
         <group>other</group>
         <httpmethod>GET</httpmethod>
         <id>GetPolicy</id>
+        <ignoreProxy>false</ignoreProxy>
         <intemplate></intemplate>
         <ntlmDomain></ntlmDomain>
         <ntlmHost></ntlmHost>
@@ -26,38 +27,52 @@
    &lt;soap:Body&gt;
       &lt;GetAccountsResponse xmlns="http://www.corillian.com/corillian/banking/messages/2004/05" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
          &lt;Accounts xmlns="http://www.corillian.com/corillian/banking/domain/2004/05"&gt;
-            &lt;MaximumDailyBalance&gt;4&lt;/MaximumDailyBalance&gt;
-            &lt;CurrentDepositBalance&gt;39742.1421&lt;/CurrentDepositBalance&gt;
-            &lt;AvailableDepositBalance&gt;32374.7256&lt;/AvailableDepositBalance&gt;
-            &lt;OutstandingLoanBalance&gt;5&lt;/OutstandingLoanBalance&gt;
-            &lt;InvestmentRetirementBalance&gt;3&lt;/InvestmentRetirementBalance&gt;
-            &lt;Masked&gt;false&lt;/Masked&gt;
+            &lt;Description&gt;Scott's Benefits&lt;/Description&gt;
+            &lt;DisplayName&gt;Scott's Benefits&lt;/DisplayName&gt;
+            &lt;DataAvailable&gt;true&lt;/DataAvailable&gt;
+            &lt;Visible&gt;true&lt;/Visible&gt;
             &lt;Account&gt;
                &lt;Index&gt;1&lt;/Index&gt;
-               &lt;Number&gt;0000765432133&lt;/Number&gt;
-               &lt;NumberMasked&gt;7654321&lt;/NumberMasked&gt;
-               &lt;Type&gt;SAVINGS&lt;/Type&gt;
-               &lt;HostAccountType&gt;1&lt;/HostAccountType&gt;
-               &lt;HostAccount2&gt;1002&lt;/HostAccount2&gt;
-               &lt;Description&gt;Scott's Benefits&lt;/Description&gt;
-               &lt;DisplayName&gt;Scott's Benefits&lt;/DisplayName&gt;
-               &lt;LifeBenefit&gt;$200,000&lt;/LifeBenefit&gt;
-               &lt;ADDBenefit&gt;$200,000&lt;/ADDBenefit&gt;
+               &lt;Number&gt;0000123456771&lt;/Number&gt;
+               &lt;NumberMasked&gt;56771&lt;/NumberMasked&gt;
+               &lt;!-- Health --&gt;
+               &lt;HealthPlanType&gt;PPO&lt;/HealthPlanType&gt;
+               &lt;AnnualLimit&gt;None&lt;/AnnualLimit&gt;
+               &lt;InNetworkDeductibleSingle&gt;$250&lt;/InNetworkDeductibleSingle&gt;
+               &lt;InNetworkDeductibleFamily&gt;$750&lt;/InNetworkDeductibleFamily&gt;
+               &lt;InNetworkOutOfPocketLimitSingle&gt;$3,000&lt;/InNetworkOutOfPocketLimitSingle&gt;
+               &lt;InNetworkOutOfPocketLimitFamily&gt;$6,000&lt;/InNetworkOutOfPocketLimitFamily&gt;
+               &lt;InNetworkPrimaryCareCopay&gt;$20 per visit&lt;/InNetworkPrimaryCareCopay&gt;
+               &lt;InNetworkSpecialistCopay&gt;$20 per visit&lt;/InNetworkSpecialistCopay&gt;
+               &lt;InNetworkPreventiveCopay&gt;No charge&lt;/InNetworkPreventiveCopay&gt;
+               &lt;OutOfNetworkDeductibleSingle&gt;$750&lt;/OutOfNetworkDeductibleSingle&gt;
+               &lt;OutOfNetworkDeductibleFamily&gt;$2,250&lt;/OutOfNetworkDeductibleFamily&gt;
+               &lt;OutOfNetworkOutOfPocketLimitSingle&gt;$6,000&lt;/OutOfNetworkOutOfPocketLimitSingle&gt;
+               &lt;OutOfNetworkOutOfPocketLimitFamily&gt;$12,000&lt;/OutOfNetworkOutOfPocketLimitFamily&gt;
+               &lt;OutOfNetworkPrimaryCareCopay&gt;40% coinsurance&lt;/OutOfNetworkPrimaryCareCopay&gt;
+               &lt;OutOfNetworkSpecialistCopay&gt;40% coinsurance&lt;/OutOfNetworkSpecialistCopay&gt;
+               &lt;OutOfNetworkPreventiveCopay&gt;40% coinsurance&lt;/OutOfNetworkPreventiveCopay&gt;
+               &lt;InsuranceCard&gt;http://vertapp.konylabs.net/KonyInsuranceWeb/images/insurecard.png&lt;/InsuranceCard&gt;
+               &lt;!-- Dental --&gt;
                &lt;DentalDeductable&gt;0&lt;/DentalDeductable&gt;
                &lt;DentalCoInsurance&gt;100%&lt;/DentalCoInsurance&gt;
                &lt;MaximumDentalBenefit&gt;$1500&lt;/MaximumDentalBenefit&gt;
-               &lt;LTDMaxBenefit&gt;$10000&lt;/LTDMaxBenefit&gt;
+               &lt;!-- Disability --&gt;
+               &lt;LTDMaxBenefit&gt;$10,000&lt;/LTDMaxBenefit&gt;
                &lt;LTDBenefitPercentage&gt;60%&lt;/LTDBenefitPercentage&gt;
                &lt;LTDEliminationPeriod&gt;3 months&lt;/LTDEliminationPeriod&gt;
                &lt;LTDOccupationPeriod&gt;2 years&lt;/LTDOccupationPeriod&gt;
                &lt;LTDDrugAlcohol&gt;24 months&lt;/LTDDrugAlcohol&gt;
-               &lt;InsuranceCard&gt;http://vertapp.konylabs.net/KonyInsuranceWeb/images/insurecard.png&lt;/InsuranceCard&gt;
-               &lt;DataAvailable&gt;true&lt;/DataAvailable&gt;
-               &lt;Visible&gt;true&lt;/Visible&gt;
-               &lt;CurrentBalance&gt;7847.3247&lt;/CurrentBalance&gt;
-               &lt;AvailableBalance&gt;7847.3247&lt;/AvailableBalance&gt;
-               &lt;MaturityDate&gt;0001-01-01&lt;/MaturityDate&gt;
-               &lt;BillPayFeeAllowed&gt;false&lt;/BillPayFeeAllowed&gt;
+               &lt;!-- Life --&gt;
+               &lt;LifeBenefit&gt;$200,000&lt;/LifeBenefit&gt;
+               &lt;ADDBenefit&gt;$200,000&lt;/ADDBenefit&gt;
+               &lt;!-- Homeowners PNC --&gt;
+               &lt;DwellingLimit&gt;$500,000&lt;/DwellingLimit&gt;
+               &lt;OtherStructuresLimit&gt;$75,000&lt;/OtherStructuresLimit&gt;
+               &lt;PersonalPropertyLimit&gt;$325,000&lt;/PersonalPropertyLimit&gt;
+               &lt;LossOfUseLimit&gt;$150,000&lt;/LossOfUseLimit&gt;
+               &lt;PersonalLiability&gt;$500,000 each occurrence&lt;/PersonalLiability&gt;
+               &lt;MedicalPayToOthers&gt;$2,500 each person&lt;/MedicalPayToOthers&gt;
             &lt;/Account&gt;
          &lt;/Accounts&gt;
       &lt;/GetAccountsResponse&gt;
@@ -372,6 +387,138 @@
             <testvalue></testvalue>
             <value>policyList</value>
         </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>dwellingLimit</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Account/DwellingLimit</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>policyList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>otherStructuresLimit</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Account/OtherStructuresLimit</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>policyList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>personalPropertyLimit</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Account/PersonalPropertyLimit</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>policyList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>lossOfUseLimit</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Account/LossOfUseLimit</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>policyList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>personalLiability</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Account/PersonalLiability</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>policyList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>medicalPayToOthers</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Account/MedicalPayToOthers</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>policyList</value>
+        </outparam>
         <password></password>
         <postclassname></postclassname>
         <preclassname></preclassname>
@@ -383,7 +530,7 @@
         <smscode></smscode>
         <smsenabled>false</smsenabled>
         <timeout></timeout>
-        <url>http://localhost:8080/GetLifeInfo.txt</url>
+        <url>http://localhost:8080/GetInsuranceCoverages.txt</url>
         <urlprovider></urlprovider>
         <userid></userid>
     </plainxmlservice>

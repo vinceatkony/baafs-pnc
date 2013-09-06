@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application id="PNCInsurance" name="PNCInsurance">
+    <container displayname="Form" id="frmBaby" type="form"/>
+    <container displayname="Form" id="frmClaim" type="form"/>
+    <container displayname="Form" id="frmEntre" type="form"/>
+    <container displayname="Form" id="frmLocations" type="form">
+        <component displayname="Map" id="mapLocations" type="map">
+            <attributes datatype="string" name="key" platform="general" value="Google map key is not defined in application properties"/>
+        </component>
+    </container>
+    <container displayname="Form" id="frmPolicy" type="form"/>
+    <container displayname="Form" id="frmProviders" type="form">
+        <component displayname="TextBox2" id="textbox220982117452477" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmUsage" type="form"/>
+    <globalsequences/>
+    <skins/>
+</application>

@@ -22,7 +22,7 @@
         <width>true</width>
         <height>false</height>
     </overridePerferred>
-    <projectName>AcmeInsurance</projectName>
+    <projectName>PNCInsurance</projectName>
     <formName>frmClaim</formName>
     <platform>0</platform>
     <mode>0</mode>

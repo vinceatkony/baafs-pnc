@@ -19,16 +19,12 @@ var mergeHeaders = function(httpHeaders, globalHeaders) {
     }
 
 function appmiddlewareinvoker(inputParam, isBlocking, indicator, datasetID) {
-    if (appConfig.serverPort != null) {
-        var url = "http://" + appConfig.serverIp + ":" + appConfig.serverPort + "/" + appConfig.middlewareContext + "/MWServlet";
-    } else {
-        var url = "http://" + appConfig.serverIp + "/" + appConfig.middlewareContext + "/MWServlet";
-    }
+    var url = appConfig.url;
     var sessionIdKey = "cacheid";
     inputParam.appID = appConfig.appId;
     inputParam.appver = appConfig.appVersion;
     inputParam["channel"] = "rc";
-    inputParam["platformver"] = "5.0.GA";
+    inputParam["platformver"] = "5.0.GA_v201307261844";
     inputParam["platform"] = kony.os.deviceInfo().name;
     if (indicator) {
         inputParam["indicator"] = indicator;
@@ -54,16 +50,12 @@ function appmiddlewareinvoker(inputParam, isBlocking, indicator, datasetID) {
 };
 
 function appmiddlewaresecureinvoker(inputParam, isBlocking, indicator, datasetID) {
-    if (appConfig.secureServerPort != null) {
-        var url = "https://" + appConfig.serverIp + ":" + appConfig.secureServerPort + "/" + appConfig.middlewareContext + "/MWServlet";
-    } else {
-        var url = "https://" + appConfig.serverIp + "/" + appConfig.middlewareContext + "/MWServlet";
-    }
+    var url = appConfig.secureurl;
     var sessionIdKey = "cacheid";
     inputParam.appID = appConfig.appId;
     inputParam.appver = appConfig.appVersion;
     inputParam["channel"] = "rc";
-    inputParam["platformver"] = "5.0.GA";
+    inputParam["platformver"] = "5.0.GA_v201307261844";
     inputParam["platform"] = kony.os.deviceInfo().name;
     if (indicator) {
         inputParam["indicator"] = indicator;
@@ -89,16 +81,12 @@ function appmiddlewaresecureinvoker(inputParam, isBlocking, indicator, datasetID
 };
 
 function appmiddlewareinvokerasync(inputParam, callBack) {
-    if (appConfig.serverPort != null) {
-        var url = "http://" + appConfig.serverIp + ":" + appConfig.serverPort + "/" + appConfig.middlewareContext + "/MWServlet";
-    } else {
-        var url = "http://" + appConfig.serverIp + "/" + appConfig.middlewareContext + "/MWServlet";
-    }
+    var url = appConfig.url;
     var sessionIdKey = "cacheid";
     inputParam.appID = appConfig.appId;
     inputParam.appver = appConfig.appVersion;
     inputParam["channel"] = "rc";
-    inputParam["platformver"] = "5.0.GA";
+    inputParam["platformver"] = "5.0.GA_v201307261844";
     inputParam["platform"] = kony.os.deviceInfo().name;
     inputParam[sessionIdKey] = sessionID;
     if (globalhttpheaders) {
@@ -113,16 +101,12 @@ function appmiddlewareinvokerasync(inputParam, callBack) {
 };
 
 function appmiddlewaresecureinvokerasync(inputParam, callBack) {
-    if (appConfig.secureServerPort != null) {
-        var url = "https://" + appConfig.serverIp + ":" + appConfig.secureServerPort + "/" + appConfig.middlewareContext + "/MWServlet";
-    } else {
-        var url = "https://" + appConfig.serverIp + "/" + appConfig.middlewareContext + "/MWServlet";
-    }
+    var url = appConfig.secureurl;
     var sessionIdKey = "cacheid";
     inputParam.appID = appConfig.appId;
     inputParam.appver = appConfig.appVersion;
     inputParam["channel"] = "rc";
-    inputParam["platformver"] = "5.0.GA";
+    inputParam["platformver"] = "5.0.GA_v201307261844";
     inputParam["platform"] = kony.os.deviceInfo().name;
     inputParam[sessionIdKey] = sessionID;
     if (globalhttpheaders) {
@@ -148,6 +132,6 @@ function callAppMenu() {
         ["appMenuInventory", "My Inventory", "mailmenuicon.png", appMenuInventory_callback_seq0],
         ["appMenuRecipes", "My Recipes", "mailmenuicon.png", appMenuRecipes_callback_seq0]
     ];
-    kony.application.createAppMenu("AcmeInsuranceAppMenu", appMenu, null, null);
-    kony.application.setCurrentAppMenu("AcmeInsuranceAppMenu");
+    kony.application.createAppMenu("PNCInsuranceAppMenu", appMenu, null, null);
+    kony.application.setCurrentAppMenu("PNCInsuranceAppMenu");
 }

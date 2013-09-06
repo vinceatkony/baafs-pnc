@@ -81,11 +81,11 @@ function addWidgetsfrmLocations() {
         "separatorThickness": 1,
         "separatorColor": "64646400",
         "showScrollbars": false,
-        "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW,
         "groupCells": false,
         "screenLevelWidget": false,
         "onRowClick": frmLocations_segLocations_onRowClick_seq0,
-        "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR
+        "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR,
+        "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW
     }, {
         "margin": [0, 0, 0, 0],
         "padding": [0, 0, 0, 0],
@@ -120,7 +120,6 @@ function addWidgetsfrmLocations() {
         "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -224,7 +223,6 @@ function addWidgetsfrmLocations() {
         "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -260,7 +258,6 @@ function addWidgetsfrmLocations() {
         "margin": [0, 0, 0, 0],
         "padding": [1, 1, 1, 1],
         "vExpand": false,
-        "hExpand": true,
         "marginInPixel": false,
         "paddingInPixel": false,
         "layoutType": constants.CONTAINER_LAYOUT_BOX
@@ -275,7 +272,7 @@ function frmLocationsGlobals() {
     var MenuId = [];
     frmLocations = new kony.ui.Form2({
         "id": "frmLocations",
-        "title": null,
+        "title": "PNC Insurance",
         "needAppMenu": true,
         "enabledForIdleTimeout": false,
         "type": constants.FORM_TYPE_NATIVE,
